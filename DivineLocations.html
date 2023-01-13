@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/Styles.css" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        div.card {
+            width: 33.33%;
+            background-color: white;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            margin-bottom: 25px;
+        }
+        
+        div.container {
+            text-align: center;
+            padding: 10px 20px;
+        }
+        
+        img {
+            max-width: 100%;
+            height: 500px;
+        }
+        
+        .card {
+            float: left;
+            width: 33.33%;
+            padding: 5px;
+        }
+        /* Clear floats after image containers */
+        
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        
+        h1 {
+            color: brown;
+            align-items: center;
+            text-align: center;
+        }
+        
+        p {
+            color: crimson;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="navbar">
+        <div class="navbar-brand">India Tourism</div>
+        <div class="nav">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="destinationsMain.html">Destinations</a></li>
+                <li><a href="destinations.html">States</a></li>
+                <li><a href="Culture.html">Cultures</a></li>
+                <li><a href="popular.html">Popular Places</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+                <li><a href="index.html">Newsletter</a></li>
+                <li><a href="About.html">About</a></li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        function readMore(city) {
+            let dots = document.querySelector(`.card[data-city="${city}"] .dots`);
+            let moreText = document.querySelector(`.card[data-city="${city}"] .more`);
+            let btnText = document.querySelector(`.card[data-city="${city}"] .myBtn`);
+
+            if (dots.style.display === "none") {
+                dots.style.display = "inline";
+                btnText.textContent = "Read more";
+                moreText.style.display = "none";
+            } else {
+                dots.style.display = "none";
+                btnText.textContent = "Read less";
+                moreText.style.display = "inline";
+            }
+        }
+    </script>
+    <div class="card" data-city="buda">
+        <h2>VISIT GOLDEN TEMPLE</h2>
+        <!--<div class="info"> <span class="date"><i class="far fa-calendar"></i> November 12, 2019</span> <span class="comment"><i class="far fa-comment-alt"></i> 2 comments</span> </div>-->
+        <div class="img">
+            <a href="https://www.google.com/maps/place/Sri+Harmandir+Sahib/@31.6199803,74.8742962,17z/data=!3m1!4b1!4m5!3m4!1s0x39197ca8f667bd97:0x604384897626248e!8m2!3d31.61999!4d74.8764673?hl=en-GB">
+                <img class="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Golden_Temple_nighttime.jpg/1200px-Golden_Temple_nighttime.jpg">
+            </a>
+        </div>
+        <p><i><h3>The Golden Temple</h3></i></p>
+        <table>
+            <tr>
+                <td><b>Location</b></td>
+                <td><a href="https://www.google.com/maps/place/Sri+Harmandir+Sahib/@31.6199803,74.8742962,17z/data=!3m1!4b1!4m5!3m4!1s0x39197ca8f667bd97:0x604384897626248e!8m2!3d31.61999!4d74.8764673?hl=en-GB">Amritsar</a></td>
+            </tr>
+            <tr>
+                <td><b>State</b></td>
+                <td><a href="">Punjab</a></td>
+            </tr>
+            <tr>
+                <td><b>Country</b></td>
+                <td><a href="">India</a></td>
+            </tr>
+        </table>
+        <p>
+            The Golden Temple is an open house of worship for all people, from all walks of life and faiths.[2] It has a square plan with four entrances, and a circumambulation path around the pool.
+            <span class="dots">...</span>
+            <span class="more" style="display: none;">One of these is Akal Takht, the chief center of religious authority of Sikhism.[4] Additional buildings include a clock tower, the offices of the Gurdwara Committee, a Museum and a langar – a free Sikh community–run kitchen that serves a simple vegetarian meal to all visitors without discrimination.[4] Over 100,000 people visit the holy shrine daily for worship.</span>
+        </p>
+        <button onclick="readMore('buda')" class="myBtn">Read more</button>
+    </div>
+
+    <div class="card" data-city="barca">
+        <h2>VISIT KEDARNATH, UTTARAKHAND</h2>
+        <!--<div class="info"> <span class="date"><i class="far fa-calendar"></i> November 12, 2019</span> <span class="comment"><i class="far fa-comment-alt"></i> 2 comments</span> </div>-->
+        <div class="img">
+            <a href="https://www.google.com/maps/place/Kedarnath,+Uttarakhand+246445/@30.7344815,79.0647465,17z/data=!3m1!4b1!4m5!3m4!1s0x39083ee051e628b1:0x167ce4efaf440f1e!8m2!3d30.7346267!4d79.0668943?hl=en-GB">
+                <img class="image" src="http://travelobiz.com/wp-content/uploads/2019/05/Kedarnath-Yatra.jpg">
+            </a>
+        </div>
+        <p><i><h3>Kedarnath</h3></i></p>
+        <table>
+            <tr>
+                <td><b>Location</b></td>
+                <td><a href="https://www.google.com/maps/place/Kedarnath,+Uttarakhand+246445/@30.7344815,79.0647465,17z/data=!3m1!4b1!4m5!3m4!1s0x39083ee051e628b1:0x167ce4efaf440f1e!8m2!3d30.7346267!4d79.0668943?hl=en-GB">Kedarnath</a></td>
+            </tr>
+            <tr>
+                <td><b>State</b></td>
+                <td><a href="">Uttarakhand</a></td>
+            </tr>
+            <tr>
+                <td><b>Country</b></td>
+                <td><a href="">India</a></td>
+            </tr>
+        </table>
+        <p>
+            temple of the lord of the field') is a Hindu temple (shrine) dedicated to the Hindu God Shiva. The temple is located on the Garhwal Himalayan range near the Mandakini river, in the state of Uttarakhand, India.
+            <span class="dots">...</span>
+            <span class="more" style="display: none;"> Due to extreme weather conditions, the temple is open to the general public only between the months of April (Akshaya Tritiya) and November (Kartik Purnima, the autumn full moon). During the winters, the vigraha (deity) from Kedarnath temple is carried down to Ukhimath where the deity is worshiped for the next six months.</span>
+        </p>
+        <button onclick="readMore('barca')" class="myBtn">Read more</button>
+    </div>
+    <div class="card" data-city="Tirupati">
+        <h2>VISIT TIRUPATI</h2>
+        <!--<div class="info"> <span class="date"><i class="far fa-calendar"></i> November 12, 2019</span> <span class="comment"><i class="far fa-comment-alt"></i> 2 comments</span> </div>-->
+        <div class="img">
+            <a href="https://www.google.com/maps/place/Kedarnath,+Uttarakhand+246445/@30.7344815,79.0647465,17z/data=!3m1!4b1!4m5!3m4!1s0x39083ee051e628b1:0x167ce4efaf440f1e!8m2!3d30.7346267!4d79.0668943?hl=en-GB">
+                <img class="image" src="https://images.newindianexpress.com/uploads/user/imagelibrary/2021/7/31/w1200X800/Tirupati_Temple.jpg">
+            </a>
+        </div>
+        <p><i><h3>TIRUPATI</h3></i></p>
+        <table>
+            <tr>
+                <td><b>Location</b></td>
+                <td><a href="https://www.google.com/maps/place/Kedarnath,+Uttarakhand+246445/@30.7344815,79.0647465,17z/data=!3m1!4b1!4m5!3m4!1s0x39083ee051e628b1:0x167ce4efaf440f1e!8m2!3d30.7346267!4d79.0668943?hl=en-GB">TIRUPATI</a></td>
+            </tr>
+            <tr>
+                <td><b>State</b></td>
+                <td><a href="">Andhra Pradesh</a></td>
+            </tr>
+            <tr>
+                <td><b>Country</b></td>
+                <td><a href="">India</a></td>
+            </tr>
+        </table>
+        <p>
+            temple of the lord of the field') is a Hindu temple (shrine) dedicated to the Hindu God Shiva. The temple is located on the Garhwal Himalayan range near the Mandakini river, in the state of Uttarakhand, India.
+            <span class="dots">...</span>
+            <span class="more" style="display: none;"> Due to extreme weather conditions, the temple is open to the general public only between the months of April (Akshaya Tritiya) and November (Kartik Purnima, the autumn full moon). During the winters, the vigraha (deity) from Kedarnath temple is carried down to Ukhimath where the deity is worshiped for the next six months.</span>
+        </p>
+        <button onclick="readMore('Tirupati')" class="myBtn">Read more</button>
+    </div>
+    <div class="card" data-city="shiridi">
+        <h2>VISIT SHIRIDI</h2>
+        <!--<div class="info"> <span class="date"><i class="far fa-calendar"></i> November 12, 2019</span> <span class="comment"><i class="far fa-comment-alt"></i> 2 comments</span> </div>-->
+        <div class="img">
+            <a href="https://www.google.com/maps/place/Kedarnath,+Uttarakhand+246445/@30.7344815,79.0647465,17z/data=!3m1!4b1!4m5!3m4!1s0x39083ee051e628b1:0x167ce4efaf440f1e!8m2!3d30.7346267!4d79.0668943?hl=en-GB">
+                <img class="image" src="https://images.newindianexpress.com/uploads/user/imagelibrary/2020/1/20/w1200X800/home-slider-1_.jpg">
+            </a>
+        </div>
+        <p><i><h3>Shiridi</h3></i></p>
+        <table>
+            <tr>
+                <td><b>Location</b></td>
+                <td><a href="https://www.google.com/maps/place/Kedarnath,+Uttarakhand+246445/@30.7344815,79.0647465,17z/data=!3m1!4b1!4m5!3m4!1s0x39083ee051e628b1:0x167ce4efaf440f1e!8m2!3d30.7346267!4d79.0668943?hl=en-GB">Shiridi</a></td>
+            </tr>
+            <tr>
+                <td><b>State</b></td>
+                <td><a href="">Maharashtra</a></td>
+            </tr>
+            <tr>
+                <td><b>Country</b></td>
+                <td><a href="">India</a></td>
+            </tr>
+        </table>
+        <p>
+            temple of the lord of the field') is a Hindu temple (shrine) dedicated to the Hindu God Shiva. The temple is located on the Garhwal Himalayan range near the Mandakini river, in the state of Uttarakhand, India.
+            <span class="dots">...</span>
+            <span class="more" style="display: none;"> Due to extreme weather conditions, the temple is open to the general public only between the months of April (Akshaya Tritiya) and November (Kartik Purnima, the autumn full moon). During the winters, the vigraha (deity) from Kedarnath temple is carried down to Ukhimath where the deity is worshiped for the next six months.</span>
+        </p>
+        <button onclick="readMore('shiridi')" class="myBtn">Read more</button>
+    </div>
+    <div class="card" data-city="badrinath">
+        <h2>VISIT BADRINATH</h2>
+        <!--<div class="info"> <span class="date"><i class="far fa-calendar"></i> November 12, 2019</span> <span class="comment"><i class="far fa-comment-alt"></i> 2 comments</span> </div>-->
+        <div class="img">
+            <a href="https://www.google.com/maps/place/Kedarnath,+Uttarakhand+246445/@30.7344815,79.0647465,17z/data=!3m1!4b1!4m5!3m4!1s0x39083ee051e628b1:0x167ce4efaf440f1e!8m2!3d30.7346267!4d79.0668943?hl=en-GB">
+                <img class="image" src="https://www.euttaranchal.com/tourism/photos/badrinath-9953735.jpg">
+            </a>
+        </div>
+        <p><i><h3>Badrinath</h3></i></p>
+        <table>
+            <tr>
+                <td><b>Location</b></td>
+                <td><a href="https://www.google.com/maps/place/Kedarnath,+Uttarakhand+246445/@30.7344815,79.0647465,17z/data=!3m1!4b1!4m5!3m4!1s0x39083ee051e628b1:0x167ce4efaf440f1e!8m2!3d30.7346267!4d79.0668943?hl=en-GB">Badrinath</a></td>
+            </tr>
+            <tr>
+                <td><b>State</b></td>
+                <td><a href="">Uttarakhand</a></td>
+            </tr>
+            <tr>
+                <td><b>Country</b></td>
+                <td><a href="">India</a></td>
+            </tr>
+        </table>
+        <p>
+            temple of the lord of the field') is a Hindu temple (shrine) dedicated to the Hindu God Shiva. The temple is located on the Garhwal Himalayan range near the Mandakini river, in the state of Uttarakhand, India.
+            <span class="dots">...</span>
+            <span class="more" style="display: none;"> Due to extreme weather conditions, the temple is open to the general public only between the months of April (Akshaya Tritiya) and November (Kartik Purnima, the autumn full moon). During the winters, the vigraha (deity) from Kedarnath temple is carried down to Ukhimath where the deity is worshiped for the next six months.</span>
+        </p>
+        <button onclick="readMore('badrinath')" class="myBtn">Read more</button>
+    </div>
+    <div class="card" data-city="barca">
+        <h2>VISIT SABARIMALA</h2>
+        <!--<div class="info"> <span class="date"><i class="far fa-calendar"></i> November 12, 2019</span> <span class="comment"><i class="far fa-comment-alt"></i> 2 comments</span> </div>-->
+        <div class="img">
+            <a href="https://www.google.com/maps/place/Kedarnath,+Uttarakhand+246445/@30.7344815,79.0647465,17z/data=!3m1!4b1!4m5!3m4!1s0x39083ee051e628b1:0x167ce4efaf440f1e!8m2!3d30.7346267!4d79.0668943?hl=en-GB">
+                <img class="image" src="https://curlytales.com/wp-content/uploads/2020/10/sannidhanam-1170x694.jpg">
+            </a>
+        </div>
+        <p><i><h3>Sabarimala</h3></i></p>
+        <table>
+            <tr>
+                <td><b>Location</b></td>
+                <td><a href="https://www.google.com/maps/place/Kedarnath,+Uttarakhand+246445/@30.7344815,79.0647465,17z/data=!3m1!4b1!4m5!3m4!1s0x39083ee051e628b1:0x167ce4efaf440f1e!8m2!3d30.7346267!4d79.0668943?hl=en-GB">Sabarimala</a></td>
+            </tr>
+            <tr>
+                <td><b>State</b></td>
+                <td><a href="">Kerala</a></td>
+            </tr>
+            <tr>
+                <td><b>Country</b></td>
+                <td><a href="">India</a></td>
+            </tr>
+        </table>
+        <p>
+            temple of the lord of the field') is a Hindu temple (shrine) dedicated to the Hindu God Shiva. The temple is located on the Garhwal Himalayan range near the Mandakini river, in the state of Uttarakhand, India.
+            <span class="dots">...</span>
+            <span class="more" style="display: none;"> Due to extreme weather conditions, the temple is open to the general public only between the months of April (Akshaya Tritiya) and November (Kartik Purnima, the autumn full moon). During the winters, the vigraha (deity) from Kedarnath temple is carried down to Ukhimath where the deity is worshiped for the next six months.</span>
+        </p>
+        <button onclick="readMore('barca')" class="myBtn">Read more</button>
+    </div>
+
+    <section>
+        <div class="footer">
+            <div class="footer-content">
+                <div class="footer-refs-content-1">
+                    <h5>Tourism <b>Agencies</b></h5>
+                    <ul>
+                        <li><a href="">Telangana tourism</a></li>
+                        <li><a href="">Andra pradesh tourism</a></li>
+                        <li><a href="">karnataka tourism</a></li>
+                        <li><a href="">Delhi Tourism</a></li>
+                        <li><a href="">Hyderabad tourism</a></li>
+                    </ul>
+                </div>
+                <div class="footer-refs-content-2">
+                    <h5>Our <b>Partners</b></h5>
+                    <ul>
+                        <li><a href="">Facebook</a></li>
+                        <li><a href="">Red FM</a></li>
+                        <li><a href="">Mythri movie makers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-refs-content-3">
+                    <h5>About the <b>Site</b></h5>
+                    <ul>
+                        <li><a href="">Terms & Conditions</a></li>
+                        <li><a href="">Privacy Policy</a></li>
+                        <li><a href="">Site Map</a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="lower-footer">
+                <div class="lower-footer-content">
+                    <div id="footer-align-left">
+                        All Rights Reserved. © 2021 indian.com
+                    </div>
+                    <div id="footer-align-right">
+                        <a href=""><i class="fab fa-facebook-square fa-3x"></i></a>
+                        <a href=""><i class="fab fa-twitter-square fa-3x"></i></a>
+                        <a href=""><i class="fab fa-google-plus-square fa-3x"></i></a>
+                        <a href=""><i class="fab fa-youtube-square fa-3x"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="function.js"></script>
+</body>
+
+</html>

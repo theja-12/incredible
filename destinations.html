@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Destinations</title>
+    <link href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link href="css/Styles.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 1.2em;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            background-color: rgb(255, 255, 117);
+        }
+        
+        .destinationslist {
+            list-style-image: url("images/point.png");
+        }
+        
+        .destination {
+            position: relative;
+            text-align: center;
+            color: rgb(239, 244, 247);
+        }
+        /* Bottom left text */
+        
+        .bottom-left {
+            position: relative;
+            bottom: 8px;
+            left: 2px;
+            background-color: rgb(21, 199, 15);
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        div.destination {
+            width: 25%;
+            background-color: white;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            margin-bottom: 25px;
+        }
+        
+        div.container {
+            text-align: center;
+            padding: 10px 20px;
+        }
+        
+        img {
+            max-width: 100%;
+            height: 350px;
+        }
+        
+        .destination {
+            float: left;
+            width: 33.33%;
+            padding: 5px;
+        }
+        /* Clear floats after image containers */
+        
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        
+        h1 {
+            color: brown;
+            align-items: center;
+            text-align: center;
+        }
+        
+        p {
+            color: crimson;
+        }
+        
+        h1 {
+            color: darkred;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- navbar starts here -->
+    <div id="navbar">
+        <div class="navbar-brand">India Tourism</div>
+        <div class="nav">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="destinationsMain.html">Destinations</a></li>
+                <li><a href="destinations.html">States</a></li>
+                <li><a href="Culture.html">Cultures</a></li>
+                <li><a href="popular.html">Popular Places</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+                <li><a href="index.html">Newsletter</a></li>
+                <li><a href="About.html">About</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- navbar ends here -->
+
+
+    <!--<h1>Popular Destinations</h1>
+
+    <ol>
+        <li>States in India
+            <ul>
+                <li><a href="https://tourism.ap.gov.in/home"><img src="https://www.holidify.com/images/bgImages/ANDHRA-PRADESH.jpg">Andhra Pradesh</a></li>
+                <li><a href="https://arunachaltourism.com/">Arunachal Pradesh</a></li>
+                <li><a href="https://tourism.assam.gov.in/">Assam</a></li>
+                <li><a href="https://tourism.bihar.gov.in/">Bihar</a></li>
+                <li><a href="https://www.chhattisgarhtourism.co.in/">Chhattisgarh</a></li>
+                <li><a href="https://goa-tourism.com/">Goa</a></li>
+                <li><a href="https://www.gujarattourism.com/">Gujarat</a></li>
+                <li><a href="https://haryanatourism.gov.in/">Haryana</a></li>
+                <li><a href="https://himachaltourism.gov.in/">Himachal Pradesh</a></li>
+                <li><a href="https://www.jktdc.co.in/">Jammu and Kashmir</a></li>
+                <li><a href="https://tourism.jharkhand.gov.in/">Jharkhand</a></li>
+                <li><a href="https://www.karnatakatourism.org/">Karnataka</a></li>
+                <li><a href="https://www.keralatourism.org/">Kerala</a></li>
+                <li><a href="https://www.mptourism.com/">Madhya Pradesh</a></li>
+                <li><a href="https://www.maharashtratourism.gov.in/te/">Maharashtra</a></li>
+                <li><a href="https://www.manipurtourism.gov.in/">Manipur</a></li>
+                <li><a href="https://www.meghalayatourism.in/">Meghalaya</a></li>
+                <li><a href="https://tourism.mizoram.gov.in/">Mizoram</a></li>
+                <li><a href="https://www.holidify.com/state/nagaland/">Nagaland</a></li>
+                <li><a href="https://ecoretreat.odishatourism.gov.in/en.html?url=ecoretreat">Odisha</a></li>
+                <li><a href="https://punjabtourism.punjab.gov.in/">Punjab</a></li>
+                <li><a href="https://www.tourism.rajasthan.gov.in/">Rajasthan</a></li>
+                <li><a href="https://www.sikkimtourism.gov.in/Public/index">Sikkim</a></li>
+                <li><a href="https://tamilnadutourism.tn.gov.in/lu/home-2/">Tamil Nadu</a></li>
+                <li><a href="https://www.telanganatourism.gov.in/">Telangana</a></li>
+                <li><a href="https://tripuratourism.gov.in/">Tripura</a></li>
+                <li><a href="http://www.uptourism.gov.in/">Uttar Pradesh</a></li>
+                <li><a href="https://uttarakhandtourism.gov.in/">Uttarakhand</a></li>
+                <li><a href="https://www.wbtdcl.com/">West Bengal</a></li>
+            </ul>
+        </li>
+
+        
+    -->
+    <div class="title">
+        <h1>EXPLORE</h1>
+    </div>
+    <div class="row">
+        <div class="destination">
+            <a href="https://tourism.ap.gov.in/home"><img src="https://www.holidify.com/images/bgImages/ANDHRA-PRADESH.jpg"></a>
+            <div class="bottom-left">
+                <h2>Andhra Pradesh</h2>
+            </div>
+        </div>
+        <div class="destination">
+            <a href="https://arunachaltourism.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Golden_Pagoda_in_Arunachal_Pradesh_%28photo_-_Jim_Ankan_Deka%29.jpg"></a>
+            <div class="bottom-left">
+                <h2>Arunachal Pradesh</h2>
+            </div>
+        </div>
+        <div class="destination">
+            <a href="https://tourism.assam.gov.in/"><img src="https://imgcld.yatra.com/ytimages/image/upload/v1517482087/AdvNation/ANN_DES71/ann_top_Assam_c49hzx.jpg"></a>
+            <div class="bottom-left">
+                <h2>Assam</h2>
+            </div>
+        </div>
+        <div class="destination">
+            <a href="https://tourism.bihar.gov.in/"><img src="https://resize.indiatvnews.com/en/resize/newbucket/715_-/2020/10/bihar-1602762001.jpg"></a>
+            <div class="bottom-left">
+                <h2>Bihar</h2>
+            </div>
+        </div>
+        <div class="destination">
+            <a href="https://www.chhattisgarhtourism.co.in/"><img src="https://3.imimg.com/data3/WI/FY/MY-7884563/chattisgarh-tour-500x500.jpg"></a>
+            <div class="bottom-left">
+                <h2>Chattisgarh</h2>
+            </div>
+        </div>
+        <div class="destination">
+            <a href="https://goa-tourism.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Goa_beautiful_beach.JPG"></a>
+            <div class="bottom-left">
+                <h2>Goa</h2>
+            </div>
+        </div>
+        <div class="destination">
+            <a href="https://www.gujarattourism.com/"><img src="https://www.gujarattourism.com/content/dam/gujrattourism/images/home_page/SOU.jpg"></a>
+            <div class="bottom-left">
+                <h2>Gujarat</h2>
+            </div>
+        </div>
+        <div class="destination">
+            <a href="https://haryanatourism.gov.in/"><img src="https://cdnbbsr.s3waas.gov.in/s37b7a53e239400a13bd6be6c91c4f6c4e/uploads/bfi_thumb/2020051468-ophznubmvxwg4dgf10i3hrmih1vrsv94ycjcqpxfhq.jpg"></a>
+            <div class="bottom-left">
+                <h2>Haryana</h2>
+            </div>
+        </div>
+        <div class="destination">
+            <a href="https://himachaltourism.gov.in/"><img src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Dharamsala-douladhar-range.jpg"></a>
+            <div class="bottom-left">
+                <h2>Himachal Pradesh</h2>
+            </div>
+        </div>
+        <div class="destination">
+            <a href="https://www.jktdc.co.in/"><img src="https://bsmedia.business-standard.com/_media/bs/img/article/2019-06/27/full/1561606340-8209.jpg"></a>
+            <div class="bottom-left">
+                <h2>Jammu and Kashmir</h2>
+            </div>
+        </div>
+        <div class="destination">
+            <a href="https://tourism.jharkhand.gov.in/"><img src="https://assets.telegraphindia.com/telegraph/aaad53b3-e835-4e0e-96a6-7752bec19a71.jpg"></a>
+            <div class="bottom-left">
+                <h2>Jharkhand</h2>
+            </div>
+        </div>
+        <div class="destination">
+            <a href="https://www.karnatakatourism.org/"><img src="https://cdn.britannica.com/53/143553-050-C7E9D573/Keshava-Temple-Somanathapura-Karnataka-India.jpg"></a>
+            <div class="bottom-left">
+                <h2>Karnataka</h2>
+            </div>
+        </div>
+        <div class="destination">
+            <a href="https://www.keralatourism.org/"><img src="https://cdn.audleytravel.com/3355/2397/79/1016846-alleppey-backwaters-kerala.jpg"></a>
+            <div class="bottom-left">
+                <h2>Kerala</h2>
+            </div>
+        </div>
+        <div class="destination">
+            <a href="https://www.mptourism.com/"><img src="https://www.mptourism.com/web/image/catalog/homepageblog2.png"></a>
+            <div class="bottom-left">
+                <h2>Madhya Pradesh</h2>
+            </div>
+        </div>
+        <div class="destination">
+            <a href="https://www.maharashtratourism.gov.in/te/"><img src="https://static.toiimg.com/photo/77718645.cms"></a>
+            <div class="bottom-left">
+                <h2>Maharashtra</h2>
+            </div>
+        </div>
+        <div class="destination">
+            <a href="https://www.manipurtourism.gov.in/"><img src="https://www.holidify.com/images/bgImages/MANIPUR.jpg"></a>
+            <div class="bottom-left">
+                <h2>Manipur</h2>
+            </div>
+        </div>
+        <div class="destination">
+            <a href="https://www.meghalayatourism.in/"><img src="https://curlytales.com/wp-content/uploads/2019/11/Meghalaya.jpg"></a>
+            <div class="bottom-left">
+                <h2>Meghalaya</h2>
+            </div>
+        </div>
+        <div class="destination">
+            <a href="https://tourism.mizoram.gov.in/"><img src="https://images.takeshape.io/86ce9525-f5f2-4e97-81ba-54e8ce933da7/dev/ba4b7b03-28ac-46fe-98c6-69328f6ee2ad/249%20Mizoram-Manipur-Kachin%20rain%20forests%20-%20chalonortheast.com.jpg?auto=compress%2Cformat&w=1600"></a>
+            <div class="bottom-left">
+                <h2>Mizoram</h2>
+            </div>
+        </div>
+        <div class="destination">
+            <a href="https://www.holidify.com/state/nagaland/"><img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/201911/SOS-Nagaland-Dec2-1_770x433.jpeg?fLob1wfi8Tp_yQNADuq7CpMbnLO63q00&size=1200:675"></a>
+            <div class="bottom-left">
+                <h2>Nagaland</h2>
+            </div>
+        </div>
+        <div class="destination">
+            <a href="https://ecoretreat.odishatourism.gov.in/en.html?url=ecoretreat"><img src="https://static.toiimg.com/photo/78365955.cms"></a>
+            <div class="bottom-left">
+                <h2>Odisha</h2>
+            </div>
+        </div>
+        <div class="destination">
+            <a href="https://punjabtourism.punjab.gov.in/"><img src="https://cdn.britannica.com/53/176353-050-5B854179/Harmandir-Sahib-Amritsar-Punjab-India.jpg"></a>
+            <div class="bottom-left">
+                <h2>Punjab</h2>
+            </div>
+        </div>
+        <div class="destination">
+            <a href="https://www.tourism.rajasthan.gov.in/"><img src="https://www.clubmahindra.com/blog/media/section_images/shuttersto-67d5d542923acf6.jpg"></a>
+            <div class="bottom-left">
+                <h2>Rajasthan</h2>
+            </div>
+        </div>
+        <div class="destination">
+            <a href="https://www.sikkimtourism.gov.in/Public/index"><img src="https://images.financialexpress.com/2021/09/Sikkim.jpeg"></a>
+            <div class="bottom-left">
+                <h2>Sikkim</h2>
+            </div>
+        </div>
+        <div class="destination">
+            <a href="https://tamilnadutourism.tn.gov.in/lu/home-2/"><img src="https://cdn.britannica.com/12/100812-050-27483D5E/Mamallapuram-Shore-Temple-Chennai-India-Tamil-Nadu.jpg"></a>
+            <div class="bottom-left">
+                <h2>Tamilnadu</h2>
+            </div>
+        </div>
+        <div class="destination">
+            <a href="https://www.telanganatourism.gov.in/"><img src="https://www.holidify.com/images/bgImages/TELANGANA.jpg"></a>
+            <div class="bottom-left">
+                <h2>Telangana</h2>
+            </div>
+        </div>
+        <div class="destination">
+            <a href="https://tripuratourism.gov.in/"><img src="https://img.traveltriangle.com/blog/wp-content/uploads/2019/11/Things-To-Do-In-Tripura-2_dec.jpg"></a>
+            <div class="bottom-left">
+                <h2>Tripura</h2>
+            </div>
+        </div>
+        <div class="destination">
+            <a href="http://www.uptourism.gov.in/"><img src="https://static.toiimg.com/photo/62251309/.jpg"></a>
+            <div class="bottom-left">
+                <h2>Uttar Pradesh</h2>
+            </div>
+        </div>
+        <div class="destination">
+            <a href="https://uttarakhandtourism.gov.in/"><img src="https://www.tourmyindia.com/states/uttarakhand/image/uttarakhand-banner.webp"></a>
+            <div class="bottom-left">
+                <h2>Uttarakhand</h2>
+            </div>
+        </div>
+        <div class="destination">
+            <a href="https://www.wbtdcl.com/"><img src="https://www.holidify.com/images/bgImages/WEST-BENGAL.jpg"></a>
+            <div class="bottom-left">
+                <h2>West Bengal</h2>
+            </div>
+        </div>
+    </div>
+    <section>
+        <div class="footer">
+            <div class="footer-content">
+                <div class="footer-refs-content-1">
+                    <h5>Tourism <b>Agencies</b></h5>
+                    <ul>
+                        <li><a href="">Telangana tourism</a></li>
+                        <li><a href="">Andra pradesh tourism</a></li>
+                        <li><a href="">karnataka tourism</a></li>
+                        <li><a href="">Delhi Tourism</a></li>
+                        <li><a href="">Hyderabad tourism</a></li>
+                    </ul>
+                </div>
+                <div class="footer-refs-content-2">
+                    <h5>Our <b>Partners</b></h5>
+                    <ul>
+                        <li><a href="">Facebook</a></li>
+                        <li><a href="">Red FM</a></li>
+                        <li><a href="">Mythri movie makers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-refs-content-3">
+                    <h5>About the <b>Site</b></h5>
+                    <ul>
+                        <li><a href="">Terms & Conditions</a></li>
+                        <li><a href="">Privacy Policy</a></li>
+                        <li><a href="">Site Map</a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="lower-footer">
+                <div class="lower-footer-content">
+                    <div id="footer-align-left">
+                        All Rights Reserved. © 2021 indian.com
+                    </div>
+                    <div id="footer-align-right">
+                        <a href=""><i class="fab fa-facebook-square fa-3x"></i></a>
+                        <a href=""><i class="fab fa-twitter-square fa-3x"></i></a>
+                        <a href=""><i class="fab fa-google-plus-square fa-3x"></i></a>
+                        <a href=""><i class="fab fa-youtube-square fa-3x"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="function.js"></script>
+</body>
+
+</html>
